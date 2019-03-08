@@ -89,6 +89,7 @@
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_6M1xUUGDEemcmc-4KvPACQ"/>
         <condition xmi:type="expression:Expression" xmi:id="_6M1xUkGDEemcmc-4KvPACQ" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
+      <actors xmi:type="process:Actor" xmi:id="_E_IZwEGFEemcmc-4KvPACQ" name="Actor1" initiator="true"/>
       <contract xmi:type="process:Contract" xmi:id="_xmniZEGDEemcmc-4KvPACQ">
         <inputs xmi:type="process:ContractInput" xmi:id="_1ZhzUEGDEemcmc-4KvPACQ" name="nameInput">
           <mapping xmi:type="process:ContractInputMapping" xmi:id="_1ZhzUUGDEemcmc-4KvPACQ"/>
