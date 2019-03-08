@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:actormapping="http://www.bonitasoft.org/ns/actormapping/6.0" xmlns:configuration="http://www.bonitasoft.org/ns/studio/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
   <process:MainProcess xmi:id="_u5l7cEGDEemcmc-4KvPACQ" name="TestGITDiagram" author="jjargot" bonitaVersion="7.8.3" bonitaModelVersion="7.8.3-001" configId="ACED000574001E546573744749544469616772616D372E382E332D303031372E382E337370">
     <elements xmi:type="process:Pool" xmi:id="_u5l7cUGDEemcmc-4KvPACQ" name="Parent TGIT">
       <elements xmi:type="process:Lane" xmi:id="_u5l7ckGDEemcmc-4KvPACQ" name="Employee lane" actor="_u5l7i0GDEemcmc-4KvPACQ">
@@ -12,13 +12,23 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_u5l7eEGDEemcmc-4KvPACQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_u5l7eUGDEemcmc-4KvPACQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_u5l7ekGDEemcmc-4KvPACQ" name="" content="" returnTypeFixed="true"/>
+          <data xmi:type="process:Data" xmi:id="_xCvWQEGkEemrGM5rFirRpw" name="teststr" dataType="_u5l7oUGDEemcmc-4KvPACQ">
+            <defaultValue xmi:type="expression:Expression" xmi:id="_xCvWQUGkEemrGM5rFirRpw" content=""/>
+          </data>
+          <operations xmi:type="expression:Operation" xmi:id="_v0okYEGkEemrGM5rFirRpw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_v0okYUGkEemrGM5rFirRpw" name="teststr" content="teststr" type="TYPE_VARIABLE">
+              <referencedElements xmi:type="process:Data" xmi:id="_xDwC4EGkEemrGM5rFirRpw" name="teststr" dataType="_u5l7oUGDEemcmc-4KvPACQ"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_v0okYkGkEemrGM5rFirRpw" name="newScript()" content="import com.support.bonitasoft.Tools&#xA;&#xA;return Tools.getName();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT"/>
+            <operator xmi:type="expression:Operator" xmi:id="_v0okY0GkEemrGM5rFirRpw" type="ASSIGNMENT"/>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_u5l7e0GDEemcmc-4KvPACQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_u5l7fEGDEemcmc-4KvPACQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_u5l7fUGDEemcmc-4KvPACQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_u5l7fkGDEemcmc-4KvPACQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_u5l7f0GDEemcmc-4KvPACQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <inputMappings xmi:type="process:InputMapping" xmi:id="_9UYKAEGDEemcmc-4KvPACQ" subprocessTarget="nameInput">
-            <processSource xmi:type="expression:Expression" xmi:id="_9UYKAUGDEemcmc-4KvPACQ" name="unai" content="unai"/>
+            <processSource xmi:type="expression:Expression" xmi:id="_9UYKAUGDEemcmc-4KvPACQ" name="Custom.getName();" content="import com.support.bonitasoft.Custom&#xA;import com.support.bonitasoft.Tools&#xA;&#xA;return Custom.getName() + Tools.getName();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT"/>
           </inputMappings>
           <calledActivityName xmi:type="expression:Expression" xmi:id="_v60H40GDEemcmc-4KvPACQ" name="SUB TGIT" content="SUB TGIT" returnTypeFixed="true"/>
           <calledActivityVersion xmi:type="expression:Expression" xmi:id="_v60H5EGDEemcmc-4KvPACQ" name="" content="" returnTypeFixed="true"/>
@@ -44,6 +54,54 @@
         <condition xmi:type="expression:Expression" xmi:id="_wly-kkGDEemcmc-4KvPACQ" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_u5l7i0GDEemcmc-4KvPACQ" documentation="This is an example of actor that is mapped to any ACME users" name="Employee actor" initiator="true"/>
+      <configurations xmi:type="configuration:Configuration" xmi:id="_8BRSoEGfEemM8psRV2QUlA" name="Production" version="7.8.3-001" username="walter.bates" password="bpm">
+        <actorMappings xmi:type="actormapping:ActorMappingsType" xmi:id="_8BTH0EGfEemM8psRV2QUlA">
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_8BTH0UGfEemM8psRV2QUlA" name="Employee actor">
+            <groups xmi:type="actormapping:Groups" xmi:id="_8BTH0kGfEemM8psRV2QUlA"/>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_8BTH00GfEemM8psRV2QUlA"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_8BTH1EGfEemM8psRV2QUlA"/>
+            <users xmi:type="actormapping:Users" xmi:id="_8BTH1UGfEemM8psRV2QUlA"/>
+          </actorMapping>
+        </actorMappings>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_8BRSoUGfEemM8psRV2QUlA" id="ACTOR_FILTER"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_8BRSokGfEemM8psRV2QUlA" id="CONNECTOR"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_8BRSo0GfEemM8psRV2QUlA" id="DATA_TYPES"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_8BRSpEGfEemM8psRV2QUlA" id="GROOVY_SCRIPT">
+          <fragments xmi:type="configuration:Fragment" xmi:id="_8BTu4EGfEemM8psRV2QUlA" key="com/support/bonitasoft/Tools.groovy" value="com/support/bonitasoft/Tools.groovy" exported="false" type="GROOVY_SCRIPT"/>
+        </processDependencies>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_8BRSpUGfEemM8psRV2QUlA" id="OTHER"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_8BRSpkGfEemM8psRV2QUlA" id="DATA_TYPES"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_8BRSp0GfEemM8psRV2QUlA" id="GROOVY_SCRIPT">
+          <fragments xmi:type="configuration:Fragment" xmi:id="_8BTu4UGfEemM8psRV2QUlA" key="com/support/bonitasoft/Tools.groovy" value="com/support/bonitasoft/Tools.groovy" exported="false" type="GROOVY_SCRIPT"/>
+        </applicationDependencies>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_8BRSqEGfEemM8psRV2QUlA" id="OTHER"/>
+      </configurations>
+      <configurations xmi:type="configuration:Configuration" xmi:id="_PNAuwEGgEemM8psRV2QUlA" name="my Environnement" version="7.8.3-001" username="walter.bates" password="bpm">
+        <actorMappings xmi:type="actormapping:ActorMappingsType" xmi:id="_PNBV0EGgEemM8psRV2QUlA">
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_PNBV0UGgEemM8psRV2QUlA" name="Employee actor">
+            <groups xmi:type="actormapping:Groups" xmi:id="_PNBV0kGgEemM8psRV2QUlA">
+              <group>/acme</group>
+            </groups>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_PNBV00GgEemM8psRV2QUlA"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_PNBV1EGgEemM8psRV2QUlA"/>
+            <users xmi:type="actormapping:Users" xmi:id="_PNBV1UGgEemM8psRV2QUlA"/>
+          </actorMapping>
+        </actorMappings>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PNAuwUGgEemM8psRV2QUlA" id="ACTOR_FILTER"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PNAuwkGgEemM8psRV2QUlA" id="CONNECTOR"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PNAuw0GgEemM8psRV2QUlA" id="DATA_TYPES"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PNAuxEGgEemM8psRV2QUlA" id="GROOVY_SCRIPT">
+          <fragments xmi:type="configuration:Fragment" xmi:id="_PNBV1kGgEemM8psRV2QUlA" key="com/support/bonitasoft/Tools.groovy" value="com/support/bonitasoft/Tools.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_UqpfUEGkEemrGM5rFirRpw" key="com/support/bonitasoft/Custom.groovy" value="com/support/bonitasoft/Custom.groovy" type="GROOVY_SCRIPT"/>
+        </processDependencies>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PNAuxUGgEemM8psRV2QUlA" id="OTHER"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PNAuxkGgEemM8psRV2QUlA" id="DATA_TYPES"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PNAux0GgEemM8psRV2QUlA" id="GROOVY_SCRIPT">
+          <fragments xmi:type="configuration:Fragment" xmi:id="_PNBV10GgEemM8psRV2QUlA" key="com/support/bonitasoft/Tools.groovy" value="com/support/bonitasoft/Tools.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_UqqGYEGkEemrGM5rFirRpw" key="com/support/bonitasoft/Custom.groovy" value="com/support/bonitasoft/Custom.groovy" type="GROOVY_SCRIPT"/>
+        </applicationDependencies>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PNAuyEGgEemM8psRV2QUlA" id="OTHER"/>
+      </configurations>
       <contract xmi:type="process:Contract" xmi:id="_u5l7jEGDEemcmc-4KvPACQ"/>
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_u5l7jUGDEemcmc-4KvPACQ">
         <name xmi:type="expression:Expression" xmi:id="_u5l7jkGDEemcmc-4KvPACQ" content="" returnTypeFixed="true"/>
@@ -90,6 +148,30 @@
         <condition xmi:type="expression:Expression" xmi:id="_6M1xUkGDEemcmc-4KvPACQ" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_E_IZwEGFEemcmc-4KvPACQ" name="Actor1" initiator="true"/>
+      <configurations xmi:type="configuration:Configuration" xmi:id="_PSN-4EGgEemM8psRV2QUlA" name="my Environnement" version="7.8.3-001" username="walter.bates" password="bpm">
+        <actorMappings xmi:type="actormapping:ActorMappingsType" xmi:id="_PSOl8EGgEemM8psRV2QUlA">
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_PSOl8UGgEemM8psRV2QUlA" name="Actor1">
+            <groups xmi:type="actormapping:Groups" xmi:id="_PSOl8kGgEemM8psRV2QUlA">
+              <group>/acme</group>
+            </groups>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_PSOl80GgEemM8psRV2QUlA"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_PSOl9EGgEemM8psRV2QUlA"/>
+            <users xmi:type="actormapping:Users" xmi:id="_PSOl9UGgEemM8psRV2QUlA"/>
+          </actorMapping>
+        </actorMappings>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PSN-4UGgEemM8psRV2QUlA" id="ACTOR_FILTER"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PSN-4kGgEemM8psRV2QUlA" id="CONNECTOR"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PSN-40GgEemM8psRV2QUlA" id="DATA_TYPES"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PSN-5EGgEemM8psRV2QUlA" id="GROOVY_SCRIPT">
+          <fragments xmi:type="configuration:Fragment" xmi:id="_PSOl9kGgEemM8psRV2QUlA" key="com/support/bonitasoft/Tools.groovy" value="com/support/bonitasoft/Tools.groovy" exported="false" type="GROOVY_SCRIPT"/>
+        </processDependencies>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PSN-5UGgEemM8psRV2QUlA" id="OTHER"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PSN-5kGgEemM8psRV2QUlA" id="DATA_TYPES"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PSN-50GgEemM8psRV2QUlA" id="GROOVY_SCRIPT">
+          <fragments xmi:type="configuration:Fragment" xmi:id="_PSOl90GgEemM8psRV2QUlA" key="com/support/bonitasoft/Tools.groovy" value="com/support/bonitasoft/Tools.groovy" exported="false" type="GROOVY_SCRIPT"/>
+        </applicationDependencies>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PSN-6EGgEemM8psRV2QUlA" id="OTHER"/>
+      </configurations>
       <contract xmi:type="process:Contract" xmi:id="_xmniZEGDEemcmc-4KvPACQ">
         <inputs xmi:type="process:ContractInput" xmi:id="_1ZhzUEGDEemcmc-4KvPACQ" name="nameInput">
           <mapping xmi:type="process:ContractInputMapping" xmi:id="_1ZhzUUGDEemcmc-4KvPACQ"/>
