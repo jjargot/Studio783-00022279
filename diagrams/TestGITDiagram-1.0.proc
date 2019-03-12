@@ -91,7 +91,7 @@
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PNAuwkGgEemM8psRV2QUlA" id="CONNECTOR"/>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PNAuw0GgEemM8psRV2QUlA" id="DATA_TYPES"/>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PNAuxEGgEemM8psRV2QUlA" id="GROOVY_SCRIPT">
-          <fragments xmi:type="configuration:Fragment" xmi:id="_PNBV1kGgEemM8psRV2QUlA" key="com/support/bonitasoft/Tools.groovy" value="com/support/bonitasoft/Tools.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_PNBV1kGgEemM8psRV2QUlA" key="com/support/bonitasoft/Tools.groovy" value="com/support/bonitasoft/Tools.groovy" type="GROOVY_SCRIPT"/>
           <fragments xmi:type="configuration:Fragment" xmi:id="_UqpfUEGkEemrGM5rFirRpw" key="com/support/bonitasoft/Custom.groovy" value="com/support/bonitasoft/Custom.groovy" type="GROOVY_SCRIPT"/>
         </processDependencies>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PNAuxUGgEemM8psRV2QUlA" id="OTHER"/>
@@ -164,11 +164,13 @@
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PSN-40GgEemM8psRV2QUlA" id="DATA_TYPES"/>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PSN-5EGgEemM8psRV2QUlA" id="GROOVY_SCRIPT">
           <fragments xmi:type="configuration:Fragment" xmi:id="_PSOl9kGgEemM8psRV2QUlA" key="com/support/bonitasoft/Tools.groovy" value="com/support/bonitasoft/Tools.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_FHOSoESiEemL56Ayt6VZiQ" key="com/support/bonitasoft/Custom.groovy" value="com/support/bonitasoft/Custom.groovy" exported="false" type="GROOVY_SCRIPT"/>
         </processDependencies>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PSN-5UGgEemM8psRV2QUlA" id="OTHER"/>
         <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PSN-5kGgEemM8psRV2QUlA" id="DATA_TYPES"/>
         <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PSN-50GgEemM8psRV2QUlA" id="GROOVY_SCRIPT">
           <fragments xmi:type="configuration:Fragment" xmi:id="_PSOl90GgEemM8psRV2QUlA" key="com/support/bonitasoft/Tools.groovy" value="com/support/bonitasoft/Tools.groovy" exported="false" type="GROOVY_SCRIPT"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_FHR9AESiEemL56Ayt6VZiQ" key="com/support/bonitasoft/Custom.groovy" value="com/support/bonitasoft/Custom.groovy" exported="false" type="GROOVY_SCRIPT"/>
         </applicationDependencies>
         <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_PSN-6EGgEemM8psRV2QUlA" id="OTHER"/>
       </configurations>
